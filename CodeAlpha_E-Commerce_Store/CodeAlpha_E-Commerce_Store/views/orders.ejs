@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Orders</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🛒 ShopEase
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/cart">Cart</a>
+
+            <a href="/logout">Logout</a>
+
+        </div>
+
+    </nav>
+
+    <!-- PAGE TITLE -->
+
+    <h1 class="center">
+        My Orders
+    </h1>
+
+    <!-- ORDERS -->
+
+    <div class="orders">
+
+        <% orders.forEach(order => { %>
+
+            <div class="order-card">
+
+                <h2>
+                    Order Status:
+                    <span class="status">
+                        <%= order.status %>
+                    </span>
+                </h2>
+
+                <h3>
+                    Total Amount: ₹<%= order.total %>
+                </h3>
+
+                <p>
+                    <b>Payment Method:</b>
+                    <%= order.paymentMethod %>
+                </p>
+
+                <p>
+                    <b>Order Date:</b>
+                    <%= order.createdAt.toDateString() %>
+                </p>
+
+                <hr>
+
+                <h3>
+                    Ordered Products
+                </h3>
+
+                <% order.products.forEach(product => { %>
+
+                    <div class="mini-product">
+
+                        <img src="<%= product.image %>">
+
+                        <div>
+
+                            <p>
+                                <b><%= product.name %></b>
+                            </p>
+
+                            <p>
+                                ₹<%= product.price %>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                <% }) %>
+
+                <hr>
+
+                <p>
+                    <b>Customer:</b>
+                    <%= order.customerName %>
+                </p>
+
+                <p>
+                    <b>Phone:</b>
+                    <%= order.phone %>
+                </p>
+
+                <p>
+                    <b>Address:</b>
+                    <%= order.address %>
+                </p>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</body>
+
+</html>
