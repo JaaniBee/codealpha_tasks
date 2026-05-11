@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEase</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        🛒 ShopEase
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/cart">Cart</a>
+
+        <% if(user){ %>
+
+            <a href="/orders">Orders</a>
+
+            <a href="/logout">Logout</a>
+
+        <% } else { %>
+
+            <a href="/login">Login</a>
+
+            <a href="/register">Register</a>
+
+        <% } %>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Discover Modern Gadgets
+        </h1>
+
+        <p>
+            Best quality products with amazing offers
+        </p>
+
+        <a href="#products">
+
+            <button class="hero-btn">
+
+                Shop Now
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="category-section">
+
+    <div class="category-card">
+        🎧 Electronics
+    </div>
+
+    <div class="category-card">
+        ⌚ Smart Watches
+    </div>
+
+    <div class="category-card">
+        🖱 Accessories
+    </div>
+
+    <div class="category-card">
+        💻 Gaming
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<h1 class="section-title">
+
+    Featured Products
+
+</h1>
+
+<div class="products" id="products">
+
+<% products.forEach(product => { %>
+
+<div class="card">
+
+    <div class="image-box">
+
+        <img src="<%= product.image %>">
+
+    </div>
+
+    <div class="card-content">
+
+        <h3>
+            <%= product.name %>
+        </h3>
+
+        <p class="price">
+            ₹<%= product.price %>
+        </p>
+
+        <p class="desc">
+            Premium quality product with modern design.
+        </p>
+
+        <a href="/product/<%= product._id %>">
+
+            <button>
+
+                View Details
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+<% }) %>
+
+</div>
+
+<!-- OFFER SECTION -->
+
+<section class="offer">
+
+    <div class="offer-box">
+
+        <h1>50% OFF</h1>
+
+        <p>On selected premium products</p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>🛒 ShopEase Store</h2>
+
+    <p>Modern Full Stack E-Commerce Website</p>
+
+</footer>
+
+</body>
+</html>
