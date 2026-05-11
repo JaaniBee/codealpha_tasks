@@ -10,12 +10,26 @@ The E-Commerce Store is a modern web application designed to simulate an online 
 
 
 🏠 Product listing on home page
+
+
 🔍 Product detail view
+
+
 🛒 Add to cart functionality
+
+
 ❌ Remove items from cart
+
+
 💰 Dynamic total price calculation
+
+
 📱 Fully responsive design
+
+
 ⚡ Fast and lightweight UI
+
+
 🧰 Tech Stack
 
 
@@ -38,6 +52,9 @@ ecommerce-store/
 └── README.md
 
 ⚙️ Installation & Setup
+
+
+
 1️⃣ Clone Repository
 git clone https://github.com/your-username/ecommerce-store.git
 
