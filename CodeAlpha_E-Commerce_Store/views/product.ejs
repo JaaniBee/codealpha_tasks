@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title><%= product.name %></title>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        🛒 ShopEase
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/cart">Cart</a>
+
+        <a href="/orders">Orders</a>
+
+    </div>
+
+</nav>
+
+<!-- PRODUCT DETAILS -->
+
+<div class="product-page">
+
+    <div class="product-image">
+
+        <img src="<%= product.image %>" alt="<%= product.name %>">
+
+    </div>
+
+    <div class="product-info">
+
+        <span class="tag">
+            Best Seller
+        </span>
+
+        <h1>
+            <%= product.name %>
+        </h1>
+
+        <h2>
+            ₹<%= product.price %>
+        </h2>
+
+        <p>
+            <%= product.description %>
+        </p>
+
+        <ul>
+
+            <li>✔ Premium Quality</li>
+
+            <li>✔ Fast Delivery</li>
+
+            <li>✔ Secure Payment</li>
+
+            <li>✔ Easy Return</li>
+
+        </ul>
+
+        <form action="/add-to-cart/<%= product._id %>" method="POST">
+
+            <button class="buy-btn">
+
+                Add To Cart
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
