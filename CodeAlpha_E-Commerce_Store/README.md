@@ -1,4 +1,5 @@
 🛒 E-Commerce Store
+
 📌 Project Overview
 
 The E-Commerce Store is a modern web application designed to simulate an online shopping platform. It allows users to browse products, view detailed information, manage a shopping cart, and calculate total prices dynamically. This project demonstrates essential full-stack development concepts and UI/UX design principles.
@@ -16,6 +17,7 @@ Frontend: HTML, CSS, JavaScript / React
 Backend: Node.js, Express (if used)
 Database: MongoDB (if used)
 Styling: CSS / Bootstrap / Tailwind (if used)
+
 📁 Project Structure
 ecommerce-store/
 │
@@ -30,6 +32,7 @@ ecommerce-store/
 ├── .env                 # Environment variables
 ├── package.json         # Dependencies and scripts
 └── README.md
+
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
 git clone https://github.com/your-username/ecommerce-store.git
@@ -54,4 +57,4 @@ http://localhost:3000
 💳 Payment gateway integration
 ❤️ Wishlist feature
 📦 Order tracking system
-🛠 Admin dashboard
+🛠 Admin dashboard﻿
