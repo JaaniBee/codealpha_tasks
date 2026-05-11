@@ -1,4 +1,4 @@
-🛒 E-Commerce Store
+🛒 E-COMMERCE STORE
 
 📌 Project Overview
 
